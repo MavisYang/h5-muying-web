@@ -1,0 +1,75 @@
+.popupModel{
+    position: absolute;
+    top:0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+.userInfo{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 531px;
+    height: 756px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 13px 0 #F88359;
+    border-radius: 12px;
+    margin:-378px 0 0 -265px;
+    text-align: -webkit-center;
+}
+.infoTitle{
+    font-family: PingFangSC-Semibold;
+    font-size: 42px;
+    color: #F88359;
+    letter-spacing: 0;
+    line-height: 114px;
+}
+.infoState{
+    color: #262D53;
+    letter-spacing: 0;
+    line-height: 29px;
+}
+.mainForm{
+    height: 571.5px;
+    font-size: 24px;
+}
+.infoTable{
+    height: 423px;
+    margin:12.5px 0 26.5px 0;
+}
+.infoTable .fill_content_text input{
+    width: 390px;
+    height: 72px;
+    border: 2px solid #F88359;
+    border-radius: 8px;
+    font-size: 24px;
+    text-indent: 20px;
+}
+#address{
+    background: url("../image/rightArrow.png")no-repeat 95% center;
+    background-size: 23px;
+}
+.fill_submit{
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    width: 463px;
+    height: 82px;
+    background: #F88359;
+    border-radius: 100px;
+    font-size: 24px;
+    color: #ffffff;
+}
+.modelClose{
+    width: 63px;
+    height: 63px;
+    background: url("../image/close.png")no-repeat center center;
+    margin-top: 30px;
+}
+.success-icon{
+    width: 100%;
+    height: 100px;
+    background: url("../image/submit.png")no-repeat center center;
+    background-size: 70px;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640,user-scalable=no,target-densitydpi=device-dpi">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <title>抽奖历史</title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/history.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/MultiPicker.css?rev=@@hash"/>
+</head>
+<body onload="load()">
+<div class="container">
+    <div class="title">一 抽奖历史 一</div>
+    <div class="content">
+        <div class="wrap"></div>
+    </div>
+    <div class="againLottery">
+        <button class="againBtn">
+            再次抽奖
+        </button>
+    </div>
+    <div class="shadowBox" style="display: none"></div>
+</div>
+<div class="popupModel" style="display: none">
+    <div class="userInfo" style="display: none">
+        <div class="infoTitle">获奖信息填写</div>
+        <div class="infoState">栗子妈妈的工作人员将在<br>
+            7个工作日内发货哟
+        </div>
+        <div class="mainForm">
+            <table cellpadding="5" class="infoTable">
+                <tr>
+                    <td style="text-align: left;color:#F88359;">姓名&nbsp;&nbsp;&nbsp;</td>
+                    <td class="fill_content_text" colspan="2" align="left">
+                        <input type="text"
+                               placeholder="请输入真实姓名"
+                               id="mather_name"
+                               name="name"
+                               autocomplete="off"
+                        >
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;color:#F88359;">电话&nbsp;&nbsp;&nbsp;</td>
+                    <td class="fill_content_text" colspan="2" align="left">
+                        <input type="text"
+                               placeholder="请填写11位手机号"
+                               id="mobile"
+                               name="phone"
+                               autocomplete="off"
+                        >
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;color:#F88359;">地址&nbsp;&nbsp;&nbsp;</td>
+                    <td class="fill_content_text" colspan="2" align="left">
+                        <input type="text"
+                               placeholder="**省**市**区"
+                               name="city"
+                               id="address"
+                               autocomplete="off"
+                               readonly="readonly"
+                        >
+                        <div id="addressContainer"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"></td>
+                    <td class="fill_content_text" colspan="2" align="left">
+                        <input type="text"
+                               placeholder="填写详细地址"
+                               id="detailAddress"
+                               name="address"
+                               autocomplete="off"
+                        >
+                    </td>
+                </tr>
+            </table>
+            <div class="buttContainer">
+                <input name="submit" type="button" class="fill_submit" value="提交"/>
+            </div>
+        </div>
+        <div class="modelClose"></div>
+    </div>
+</div>
+</body>
+<script>
+    var openid;
+    function load() {
+        $(".container").css("height", document.documentElement.clientHeight + "px");
+        if($.cookie("openid_cookie")==null||$.cookie("openid_cookie")==undefined){
+            alert("加载出错...")
+            return
+        }
+        openid = $.cookie("openid_cookie")
+        controller.init();
+        stm_clicki('send', 'event', '历史中奖', '点击', '进入页面', 1);
+    }
+</script>
+<script src="js/rewardController.js"></script>
+<script src="js/backup.js"></script>
+<script src="js/multiPicker.js"></script>
+<script src="js/monitor.js"></script>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640,user-scalable=no,target-densitydpi=device-dpi">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <title>母亲节抽奖</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/form.css">
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/MultiPicker.css?rev=@@hash"/>
+</head>
+<style>
+    html, body {
+        font-family: PingFangSC-Regular;
+        font-size: 24px;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<body onload="load()">
+<div class="mainContainer">
+    <div class="topTag"></div>
+    <div class="history">
+        历史中奖
+    </div>
+    <div class="lotteryRule">
+        抽奖规则
+    </div>
+    <div class="midTag"></div>
+    <div class="outer">
+        <div class="inner"></div>
+        <input type="button" class="butt"/>
+    </div>
+    <div class="footer">
+        <div class="prize" style="float: left;margin-left: 48px">
+            <div class="prizeBox prize1" style="background-size: 200px"></div>
+            <div class="prizeInfo">兰蔻奇迹香水礼盒</div>
+        </div>
+        <div class="prize" style="float: right;margin-right: 48px">
+            <div class="prizeBox prize2" style="background-size: 137px"></div>
+            <div class="prizeInfo">贝亲婴儿润肤乳15ml小样</div>
+        </div>
+    </div>
+    <div class="shadowBox" style="display: none"></div>
+</div>
+<div class="popupModel" style="display:block">
+    <div class="userInfo" style="display: none">
+        <div class="infoTitle">获奖信息填写</div>
+        <div class="infoState">栗子妈妈的工作人员将在<br>
+            7个工作日内发货哟
+        </div>
+        <div class="mainForm">
+            <table cellpadding="5" class="infoTable">
+                <tr>
+                    <td style="text-align: left;color:#F88359;">姓名&nbsp;&nbsp;&nbsp;</td>
+                    <td class="fill_content_text" colspan="2" align="left">
+                        <input type="text"
+                               placeholder="请输入真实姓名"
+                               id="mather_name"
+                               name="name"
+                               autocomplete="off"
+                        >
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;color:#F88359;">电话&nbsp;&nbsp;&nbsp;</td>
+                    <td class="fill_content_text" colspan="2" align="left">
+                        <input type="text"
+                               placeholder="请填写11位手机号"
+                               id="mobile"
+                               name="phone"
+                               autocomplete="off"
+                        >
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;color:#F88359;">地址&nbsp;&nbsp;&nbsp;</td>
+                    <td class="fill_content_text" colspan="2" align="left">
+                        <input type="text"
+                               placeholder="**省**市**区"
+                               name="city"
+                               id="address"
+                               autocomplete="off"
+                               readonly="readonly"
+                        >
+                        <div id="addressContainer"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left"></td>
+                    <td class="fill_content_text" colspan="2" align="left">
+                        <input type="text"
+                               placeholder="填写详细地址"
+                               id="detailAddress"
+                               name="address"
+                               autocomplete="off"
+                        >
+                    </td>
+                </tr>
+            </table>
+            <div class="buttContainer">
+                <input name="submit" type="button" class="fill_submit" value="提交"/>
+            </div>
+        </div>
+        <div class="modelClose"></div>
+    </div>
+    <div class="partStatus" style="display: none">
+        <div class="partInner">
+            <div class="partTitle"></div>
+            <div class="partIMG"></div>
+            <div class="partState"></div>
+            <div class="btnContainer">
+                <input type="button" class="negativeButton" value=""/>
+            </div>
+        </div>
+        <div class="modelClose"></div>
+    </div>
+    <div class="unFocus" style="display: none">
+        <div class="unFocusInner">
+        <div class="QrCode">
+            <img src="image/QrCode.png" class="focusQrCode"/>
+        </div>
+        <div class="QrState">栗子妈妈俱乐部会员可以获得<br>一次免费抽奖机会，赶紧加入吧~</div>
+            </div>
+        <div class="modelClose"></div>
+    </div>
+    <div class="stopLottery" style="display: block">
+        <div class="stopState">抽奖已结束</div>
+    </div>
+</div>
+</body>
+<script>
+    var openid;
+    function load() {
+        $('.mainContainer').css('height', document.documentElement.clientHeight + 'px');
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null)
+                return (r[2]);
+            return null;
+        }
+        if(!($.cookie("openid_cookie")==null||$.cookie("openid_cookie")==undefined)){
+            openid = $.cookie("openid_cookie")
+            controller.init();
+            return
+        }
+        $.ajax({
+            url:wxIp+'wx/base/getUserInfo?code='+GetQueryString('code'),
+            type:'get',
+            success: function (res) {
+                if(res.status==200){
+                    openid = res.data.openid;
+                    $.cookie("openid_cookie", openid, {"expires": 1});
+                    controller.init();
+                }else {
+                    alert("加载失败,请刷新重试")
+                }
+            }
+        })
+        stm_clicki('send', 'event', '母亲节抽奖', '点击', '进入页面', 1);
+    }
+</script>
+<script src="js/lotteryController.js"></script>
+<script src="js/backup.js"></script>
+<script src="js/multiPicker.js"></script>
+<script src="js/monitor.js"></script>
+</html>

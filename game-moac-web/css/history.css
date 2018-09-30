@@ -1,0 +1,135 @@
+
+.container {
+    width: 100%;
+    background: linear-gradient(to bottom, #FDD434, #F8E983 10%, #F9E676 70%, #FDD434);
+}
+
+.title {
+    width: 100%;
+    height: 129px;
+    line-height: 129px;
+    text-align: center;
+    font-size: 36px;
+    color: #F88359;
+    letter-spacing: 0;
+    font-weight: 600;
+}
+
+.content {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 620px;
+    padding-top: 5px;
+    -webkit-overflow-scrolling: touch;
+}
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.lotteryBox {
+    background: #FFFFFF;
+    box-shadow: 0 2px 13px 0 #F88359;
+    border-radius: 12px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    height: 96px;
+    width: 571px;
+}
+
+.coupon {
+    display: inline-block;
+    width: 389px;
+    font-size: 24px;
+    line-height: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+    letter-spacing: 0;
+}
+
+.doneBtn{
+    width: 157px;
+    height: 62px;
+    line-height: 62px;
+    background: #D5D5D5;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 24px;
+}
+.unDoneBtn{
+    width: 157px;
+    height: 62px;
+    line-height: 62px;
+    background: #F88359;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 24px;
+}
+.btn-coupon {
+    background: #F88359;
+}
+
+.btn-post {
+    background: #D5D5D5;
+}
+
+.againLottery {
+    text-align: center;
+}
+
+.againBtn {
+    -webkit-appearance: none;
+    outline: none;
+    width: 481px;
+    margin-top: 98px;
+    border-radius: 100px;
+    height: 82px;
+    padding: 10px;
+    font-size: 28px;
+    color: #FFFFFF;
+    background: #F88359;
+}
+.shadowBox {
+    position: absolute;
+    z-index: 6;
+    top: 40%;
+    left: 236px;
+    width: 168px;
+    height: 197px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: -webkit-center;
+}
+.fresh-icon{
+    width: 100%;
+    height: 100px;
+    background: url("../image/refresh.png") no-repeat center;
+    background-size: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
