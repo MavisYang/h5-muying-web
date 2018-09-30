@@ -1,0 +1,240 @@
+/*@font-face {*/
+    /*font-family: titleFont;*/
+    /*src: url("../fontstyle/title_font.ttf");*/
+/*}*/
+body,html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+    -moz-text-size-adjust: 100% !important;
+    -ms-text-size-adjust: 100% !important;
+}
+.header {
+    width: 640px;
+    height: 235px;
+    line-height: 310px;
+    letter-spacing: 8px;
+    font-size: 72px;
+    font-weight: bold;
+    color: #009eff;
+    text-shadow: 4px 4px 6px #cfcfcf;
+}
+
+.content {
+    width: 640px;
+    height: 545px;
+}
+
+.footer {
+    width: 640px;
+}
+
+.adForm {
+    text-align: center;
+    padding-left: 36px;
+}
+
+.adSelect {
+    width: 560px;
+    height: 87px;
+    line-height: 32px;
+    background: #fff;
+    border: 1px solid #CFCFCF;
+    border-radius: 5px;
+    padding: 3px;
+    vertical-align: middle;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.adSelect select {
+    -webkit-appearance: none;
+    opacity: 0;
+    width: 560px;
+    height: 87px;
+    line-height: 32px;
+    border: 1px solid #CFCFCF;
+    border-radius: 5px;
+    /*padding: 3px;*/
+    vertical-align: middle;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    margin-top: -58px;
+}
+
+.adSelect #date {
+    -webkit-appearance: none;
+    opacity: 0;
+    width: 555px;
+    height: 86px;
+    line-height: 32px;
+    background: #fff;
+    border: 1px solid #CFCFCF;
+    border-radius: 5px;
+    /*padding: 3px;*/
+    vertical-align: middle;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    margin-top: -58px;
+}
+
+.telText, .SRCodeText {
+    width: 560px;
+    height: 87px;
+    padding: 3px;
+    background: #fff;
+    vertical-align: middle;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 24px;
+    border: 1px solid #CFCFCF;
+    border-radius: 5px;
+}
+
+.telText .tel, .SRCodeText .SRCode {
+    -webkit-appearance: none;
+    width: 555px;
+    height: 86px;
+    line-height: 32px;
+    border-style: none;
+    /*padding-top: 3px;*/
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    outline: none;
+    cursor: pointer;
+    text-align: left;
+    text-indent: 30px;
+    font-size: 24px;
+    font-family: PingFangSC-Light, sans-serif;
+    color: #909090;
+}
+
+.adSelect span {
+    display: block;
+    margin-top: 26px;
+}
+
+.adSelect .dot {
+    width: 12px;
+    height: 12px;
+    border-right: 5px solid #009EFF;
+    border-bottom: 5px solid #009EFF;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    margin-top: -25px;
+    margin-left: 520px;
+}
+
+.nextButton {
+    -webkit-appearance: none;
+    outline: none;
+    border: none;
+    width: 555px;
+    height: 86px;
+    line-height: 32px;
+    background: rgba(0,0,0,0);
+    /*border-radius: 5px;*/
+    margin: 0;
+    padding: 0;
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+    text-align: center;
+    color: #009EFF;
+    font-size: 28px;
+}
+
+.buttonBox {
+    /*padding-left: 36px;*/
+    /*padding-top: 23px;*/
+    width: 560px;
+    height: 87px;
+    padding: 3px 3px 3px 3px;
+    background: #afafaf;
+    /*margin-top: 24px;*/
+    margin-left: 36px;
+    border-radius: 5px;
+}
+.adForm_tip{
+    font-size: 20px;
+    color: #696969;
+}
+.pageview_bg{
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 99.5%;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+}
+input#checkboxId{
+    width: 30px;
+    height: 30px;
+}
+input#checkboxId,a.privacyAgreement{
+    display: inline-block;
+    vertical-align: middle;
+}
+.privacyOption{
+    height: 60px;
+    line-height: 40px;
+}
+.privacyAgreement_modal{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+}
+.privacyAgreement_detail{
+    width: 410px;
+    height: 550px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -260px 0 0 -225px;
+    padding: 20px;
+    border-radius: 8px;
+}
+.privacyAgreement_close{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    /* top: 19%; */
+    /* left: 77%; */
+    margin: -80px 0 0 380px;
+    background: rgba(0,0,0,0.8) url('http://wyeth-1252311027.file.myqcloud.com/pullgrouphelper/image/picClose.png')no-repeat center 60%;
+    border-radius: 25px;
+}
+b.privacyAgreement_title{
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+    font-size: 28px;
+}
+a.privacyAgreement_list{
+    height: 430px;
+    display: inline-block;
+    text-align: left;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.privacyAgreement_submit{
+    width: 210px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    /* border: 2px solid; */
+    border-radius: 8px;
+    margin-top: 14px;
+    background: #009eff;
+    color: #fff;
+}
+.adForm_tip a{
+    color: red;
+}

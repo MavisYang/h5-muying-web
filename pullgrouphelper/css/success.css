@@ -1,0 +1,110 @@
+/*@font-face {*/
+    /*font-family: titleFont;*/
+    /*src: url("../fontstyle/title_font.ttf");*/
+/*}*/
+body,html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+    -moz-text-size-adjust: 100% !important;
+    -ms-text-size-adjust: 100% !important;
+}
+.header {
+    width: 640px;
+    height: 220px;
+    /*background: url(../image/successIMG.jpeg) no-repeat center 70%;*/
+    /*background-size: 200px;*/
+    line-height: 300px;
+    letter-spacing: 8px;
+    font-size: 72px;
+    font-weight: bold;
+    color: #009eff;
+    /*font-family:titleFont;*/
+    text-shadow: 4px 4px 6px #cfcfcf;
+}
+.header_repeat{
+    width: 640px;
+    height: 220px;
+    /*background: url(../image/repeatIMG.jpeg) no-repeat center 70%;*/
+    /*background-size: 350px;*/
+    line-height: 300px;
+    letter-spacing: 8px;
+    font-size: 72px;
+    font-weight: bold;
+    color: #009eff;
+    /*font-family:titleFont;*/
+    text-shadow: 4px 4px 6px #cfcfcf;
+}
+.content {
+    width: 640px;
+    height: 650px;
+    text-align: center;
+    /*padding-top: 50px;*/
+}
+.rep_content{
+    width: 640px;
+    height: 650px;
+    text-align: center;
+}
+.replyText {
+    width: 450px;
+    height: 450px;
+    padding: 20px 20px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 21px;
+    text-align: left;
+    line-height: 2em;
+    color: #009EFF;
+    font-size: 28px;
+    margin-left: 72px;
+    /*margin-top: 50px;*/
+    box-shadow: 0px 0px 8px #f0eaec;
+}
+.replyText .serialNumber{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #009eff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 15px;
+    color: #fff;
+}
+.replyText_repeat{
+    width: 450px;
+    height: 115px;
+    padding: 20px 20px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 21px;
+    text-align: left;
+    line-height: 2em;
+    color: #009EFF;
+    font-size: 28px;
+    margin-left: 72px;
+    /*margin-top: 60px;*/
+    box-shadow: 0px 0px 8px #f0eaec;
+}
+.validateCode {
+    outline: none;
+    -webkit-appearance: none;
+    width: 250px;
+    height: 87px;
+    border: 0;
+    border-radius: 5px;
+    background: #FFEE50;
+    vertical-align: middle;
+    color: #009EFF;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 50px;
+    font-size: 24px;
+    text-indent: -10px;
+    font-family: PingFangSC-Light, sans-serif;
+}
+
+.footer {
+    width: 640px;
+    /*height: 295px;*/
+    /*background: url("../image/logo.png") no-repeat center 70%;*/
+    background-size: 15%;
+}

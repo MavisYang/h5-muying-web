@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+    <meta name="wap-font-scale" content="no">
+    <title>申请入群</title>
+    <link rel="stylesheet" href="http://wyeth-1252311027.file.myqcloud.com/pullgrouphelper/css/register.css">
+    <!--<script src="http://wyeth-1252311027.file.myqcloud.com/js/browser.js"></script>-->
+    <script src="http://wyeth-1252311027.file.myqcloud.com/pullgrouphelper/js/jquery-3.0.0.min.js"></script>
+    <script src="http://wyeth-1252311027.file.myqcloud.com/pullgrouphelper/js/jquery.cookie.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 24px;
+            font-family: PingFangSC-Regular, sans-serif;
+        }
+        .container_bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-filter: blur(10px);
+            filter: blur(4px);
+        }
+        .container_img {
+            width: 100%;
+            height: 99.5%;
+        }
+
+        .container {
+            position: relative;
+        }
+    </style>
+</head>
+<body onload="load()">
+    <img src="http://wyeth-1252311027.file.myqcloud.com/pullgrouphelper/image/bgIMG.jpeg" class="pageview_bg">
+<div class="container">
+    <div class="header">宝妈微社群</div>
+    <div class="content">
+        <form class="adForm">
+            <div class="adSelect" id="citySelect">
+                <span>选择市</span>
+                <div class="dot"></div>
+                <select class="selectChild" name="city" id="city" onchange="get_city(this)">
+                </select>
+            </div>
+            <div class="adSelect" id="hospitalSelect">
+                <span>选择医院</span>
+                <div class="dot"></div>
+                <select class="selectChild" name="province" id="province" onchange="get_hospital(this)">
+                </select>
+            </div>
+            <div class="adSelect" id="predateSelect">
+                <span>选择预产期</span>
+                <div class="dot"></div>
+                <input type="date" class="selectChild" name="babyBir" id="date"  onchange="get_predate(this)" />
+            </div>
+            <div class="telText" id="telText">
+                <input type="number" class="tel" id="tel" placeholder="请输入正确手机号获得入群邀请码"/>
+            </div>
+        </form>
+        <div class="adForm_tip"><a>重要提示:&nbsp;请妈妈注意填写准确预产期。<br>所有信息仅用于妈妈参与群内福利活动。</a></div>
+    </div>
+    <div class="footer">
+        <div class="privacyOption">
+            <input type="checkbox" id="checkboxId"><a href="#" class="privacyAgreement">已同意用户信息隐私协议</a>
+        </div>
+        <div class="buttonBox">
+            <input type="button" id="nextButton" class="nextButton" readonly="readonly" disabled="disabled" value="提交并获取短信验证码"/>
+        </div>
+    </div>
+</div>
+<div class="privacyAgreement_modal" style="display: none">
+    <div class="privacyAgreement_detail">
+        <div class="privacyAgreement_close"></div>
+        <b class="privacyAgreement_title">用户信息隐私协议</b><br>
+        <a class="privacyAgreement_list">
+            <p>&nbsp;&nbsp;&nbsp;访问者在提交注册并接受本网站服务之前，请务必仔细阅读本声明。访问者访问本网站的行为以及通过各类方式利用本网站的行为，都将被视作是对本声明全部内容的自愿且无异议的认可。</p>
+
+            <p>第一条 访问者在从事与本网站相关的所有行为（包括但不限于访问浏览、利用、转载、宣传介绍）时，必须以善意且谨慎的态度行事；访问者不得故意或者过失的损害本网站的各类合法权益，不得利用本网站以任何方式直接或者间接的从事违反中华人民共和国法律、国际公约以及社会公德的行为。</p>
+
+            <p>第二条 您确认，在您完成注册时，您应当是具备相应民事行为能力的自然人、法人或其他组织。</p>
+
+            <p>第三条  在您按照注册页面提示填写信息、阅读并同意本协议并完成全部注册程序后或以其他宝妈微社群允许的方式实际使用宝妈微社群平台服务时，即表示您自愿接受本协议的约束。在注册时，您应当按照法律法规要求，或注册页面的提示，准确填写并及时更新您提供的城市、医院、预产期及联系电话等联系方式，以便宝妈微社群与您进行有效联系或为您提供服务，您对此表示接受和认可。</p>
+
+            <p>第四条 宝妈微社群建议，任何未满18周岁的未成年人参加网上活动应事先取得其监护人（以下简称"监护人"）的同意并遵守《青少年网络文明公约》。</p>
+
+            <p>第五条 宝妈微社群将在宝妈微社群平台公布并不时修订隐私权政策，隐私权政策构成本协议的有效组成部分。</p>
+
+            <p>第六条 为保护您的个人信息的安全，宝妈微社群一直并将继续努力采取各种合理的物理、电子和管理方面的安全措施来保护用户信息，使用户的信息不会被泄漏、毁损或者丢失，包括但不限于信息加密存储、数据中心的访问控制。宝妈微社群对可能接触到用户的信息的员工也采取了严格管理，包括但不限于根据岗位的不同设置不同的权限，与员工签署保密协议等措施。对此您表示理解和认同。</p>
+
+            <p>第七条 若因本网站产生任何诉诸于诉讼程序的法律争议，双方均同意将争议提交上海市有管辖权的人民法院通过诉讼解决。</p>
+
+            <p>第八条 本声明之订立、修改、更新及最终解释权均属宝妈微社群网站所有。</p>
+
+            <p>第九条 以上声明于公布之日起生效。</p></a>
+        <div class="privacyAgreement_submit">
+            已阅读并同意协议
+        </div>
+    </div>
+
+</div>
+    <script src="http://wyeth-1252311027.file.myqcloud.com/pullgrouphelper/js/setToDate.js"></script>      <!--限定预产期时间-->
+    <script src="js/register.js"></script>
+    <script>
+        (function () {
+            $("#date").attr({"max":toDate()[0],"min":toDate()[1]});
+            if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+                handleFontSize();
+            } else {
+                if (document.addEventListener) {
+                    document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+                } else if (document.attachEvent) {
+                    document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+                    document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+                }
+            }
+            function handleFontSize() {
+                // 设置网页字体为默认大小
+                WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize': 0});
+                // 重写设置网页字体大小的事件
+                WeixinJSBridge.on('menu:setfont', function () { WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize': 0});
+                });
+
+            }
+        })();
+    </script>
+</body>
+</html>
