@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+html,
+body {
+  font-family: PingFangSC-Regular;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+  -ms-text-size-adjust: 100% !important;
+}
+a{
+  text-decoration: none;
+}
+h4{
+  height: 40px;
+  line-height: 40px;
+}
+.color_black {
+  color: #000;
+}
+.color_write {
+  color: #fff;
+}
+.color_blue {
+  color: #00A8FF;
+}
+.bgColor_blue {
+  background-color: #00A8FF;
+}
+.textCenter {
+  text-align: center;
+}
+html,
+body {
+  background: url("http://wyeth-1252311027.file.myqcloud.com/card-web/images/Bitmap.png") no-repeat;
+  /*background: url("../images/Bitmap.png") no-repeat;*/
+  background-size: cover;
+}
+.cardView {
+  text-align: center;
+}
+.card-header .cd-title {
+  font-size: 72px;
+  color: #00A8FF;
+  letter-spacing: 7.5px;
+  padding: 60px 0 40px 0;
+}
+.card-header .cd-info {
+  font-size: 30px;
+  color: #4A4A4A;
+}
+.card-content {
+  padding: 70px 50px;
+}
+input.content_info, #predateSelect{
+  -webkit-appearance: none;
+  outline: none;
+  width: 470px;
+  height: 36px;
+  line-height: 36px;
+  padding: 23px 30px;
+  margin: 15px 0;
+  border: 1px solid #D5D5D5;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  text-align: center;
+  background-color: #FFFFFF;
+  font-size: 24px;
+}
+#hospitals,#address {
+  background: url("http://wyeth-1252311027.file.myqcloud.com/card-web/images/Path 2 Copy.png") no-repeat 94% center #ffffff;
+}
+
+#predateSelect {
+  -webkit-appearance: none;
+  outline: none;
+  width: 470px;
+  height: 36px;
+  line-height: 36px;
+  padding: 23px 30px;
+  margin: 15px 0;
+  border: 1px solid #D5D5D5;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  text-align: center;
+  background-color: #FFFFFF;
+  font-size: 24px;
+}
+#predateSelect span{
+  color: #4A4A4A;
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  border-right: 5px solid #00A8FF;
+  border-bottom: 5px solid #00A8FF;
+  border-radius: 3px;
+  transform: rotate(45deg);
+  margin-top: -30px;
+  margin-left: 452px;
+}
+#date {
+  opacity: 0;
+  -webkit-appearance: none;
+  outline: none;
+  width: 470px;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #D5D5D5;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  text-align: center;
+  background-color: #FFFFFF;
+  font-size: 24px;
+  color: #4A4A4A;
+}
+input[type="date"]::-webkit-clear-button { display:none }
+
+
+.placeColor {
+  color: #9B9B9B;
+}
+.placeColor2 {
+  color: #4A4A4A;
+}
+input[disabled] {
+  color: #9B9B9B;
+  background-color: #fff;
+  opacity: 1;
+}
+input[name='edc']::-webkit-input-placeholder {
+  color: #4A4A4A;
+}
+input[name='edc']:-moz-placeholder {
+  color: #4A4A4A;
+}
+input[name='edc']::-moz-placeholder {
+  color: #4A4A4A;
+}
+input[name='edc']:-ms-input-placeholder {
+  color: #4A4A4A;
+}
+input[name='validateCode']::-webkit-input-placeholder {
+  color: #9B9B9B;
+}
+input[name='validateCode']:-moz-placeholder {
+  color: #9B9B9B;
+}
+input[name='validateCode']::-moz-placeholder {
+  color: #9B9B9B;
+}
+input[name='validateCode']:-ms-input-placeholder {
+  color: #9B9B9B;
+}
+.Checked{
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;  margin-bottom: 5px;
+}
+.privacyChecked{
+  background: url("http://wyeth-1252311027.file.myqcloud.com/card-web/images/Checkbox Checked.png") no-repeat;
+  background-size: cover;
+}
+.privacyCheckedActive{
+  background: url("http://wyeth-1252311027.file.myqcloud.com/card-web/images/Checkbox Checked Copy.png") no-repeat;background-size: cover;
+}
+.card-footer .cf-prompt {
+  font-size: 20px;
+  color: #FF5C5C;
+  line-height: 24px;
+  padding: 10px 0;
+}
+.card-footer .privacyProtocols .privacyBtn {
+  color: #00A8FF;
+  font-size: 24px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.card-footer .submitBox {
+  display: inline-block;
+  margin: 18px auto;
+}
+.card-footer .submitBox .submitBtn {
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  border-radius: 6px;
+  letter-spacing: 1.8px;
+  width: 560px;
+  height: 82px;
+  line-height: 82px;
+}
+.card-footer .submitBox .getCodeBtn {
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  border-radius: 6px;
+  letter-spacing: 1.8px;
+  width: 560px;
+  height: 82px;
+  line-height: 82px;
+  background-color: #00A8FF;
+}
+.bgColor_grey {
+  background-color: #B0AFAF;
+}
+.submitStyle {
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  border-radius: 6px;
+  letter-spacing: 1.8px;
+  width: 560px;
+  height: 82px;
+  line-height: 82px;
+}
+.model {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1050;
+  overflow: hidden;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.model-info {
+  font-size: 28px;
+}
+.modal-dialog {
+  width: 380px;
+  /*height: 500px;*/
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 30px 32px;
+}
+.modal-dialog .model-container .model-title {
+  text-align: center;
+  padding-bottom: 25px;
+}
+.modal-dialog .model-container .mode-content {
+  height: 350px;
+  font-size: 22px;
+  color: #000;
+  overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.modal-dialog .model-container .withCatalogue{
+  height: 550px;
+  display: none;
+}
+.modal-dialog .model-container .mode-content p {
+  padding: 10px 0;
+}
+.catalogue p{
+  color: #00A8FF;
+}
+.model-button {
+  padding-top: 25px;
+  text-align: -webkit-center;
+}
+.model-button .modelBtn {
+  background-color: #00A8FF;
+  color: #fff;
+  text-align: center;
+  display: block;
+  border: none;
+  outline: none;
+  width: 240px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 24px;
+  border-radius: 8px;
+}
+.model-close {
+  text-align: -webkit-right;
+  text-align: right;
+}
+.model-close .closeIcon {
+  padding: 20px 0;
+}
+.fade {
+  display: none;
+  -webkit-transition: all .15s ease;
+  -o-transition: all .15s ease;
+  transition: all .15s ease;
+}
+.confirmBox_area{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  cursor: default;
+}
+.confirmBox {
+  background-color: white;
+  width: 380px;
+  height: 280px;
+  padding: 30px;
+  text-align: center;
+  position: absolute;
+  left: 50%;top: 50%;
+  margin-left: -220px;
+  margin-top: -230px;
+  border-radius: 12px
+}
+.confirmBox_title {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  line-height: 70px;
+  margin-top: 14px;
+}
+.confirmBox_submit {
+  width: 200px;
+  font-size: 24px;
+  background-color: #00A8FF;
+  color: #fff;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  font-size: 24px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 35px;
+}
+

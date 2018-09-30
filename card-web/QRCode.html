@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640,user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <title>申请入群</title>
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/QRCodeSrtle.css">
+    <script src="js/index.js"></script>
+    <script src="js/getQRcodeUrl.js"></script>
+</head>
+<body onload="load()">
+    <div class="loadingView">
+        <div class="loadingInfo">
+            <div class="loadEffect loadImg">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <p class="loadWord">正在加载，请稍等...<br/>如果长时间未加载完毕，请重新扫描二维码</p>
+        </div>
+    </div>
+    <div class="QR-view" id="QR-view">
+       <div class="main" style="display: none">
+           <div class="QR-code">
+               <div class="QR-box">
+                   <!--<img class="QR-codeIMG" alt="二维码图片">-->
+               </div>
+           </div>
+           <div class="QRd-info">请扫描二维码添加好友<p id="codeMsg">发送下方验证码（手机末四位）</p></div>
+           <div class="QRd-title">
+               <span class="left-k"></span>
+               <span id="validateCode"></span>
+               <span class="right-k"></span>
+           </div>
+           <div class="QR-footer">
+               <span class="mark">!</span>为了保护您的隐私<br>请勿将二维码或验证码分享给其他
+           </div>
+       </div>
+    </div>
+</body>
+<!--<script src="http://ayd-1252311027.cossh.myqcloud.com/js/browser.js"></script>-->
+<script src="http://wyeth-1252311027.file.myqcloud.com/card-web/js/jquery-3.0.0.min.js"></script>
+<script src="http://wyeth-1252311027.file.myqcloud.com/card-web/js/getQueryString.js"></script>  <!--获取地址栏中的数值-->
+<script src="http://wyeth-1252311027.file.myqcloud.com/card-web/js/jquery.cookie.js"></script>   <!--存储cookie-->
+<script>
+    function load() {
+        getQRcodeFunction.init();
+    }
+</script>
+
+</html>
