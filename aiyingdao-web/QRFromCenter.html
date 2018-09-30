@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640,user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <title>申请入群</title>
+    <link rel="stylesheet" href="http://ayd-1252311027.cossh.myqcloud.com/css/loading.css">
+    <link rel="stylesheet" href="http://ayd-1252311027.cossh.myqcloud.com/css/QRCodeSrtle.css">
+    <script src="http://ayd-1252311027.cossh.myqcloud.com/js/jquery-3.0.0.min.js"></script>
+    <!--<script src="http://ayd-1252311027.cossh.myqcloud.com/js/browser.js"></script> -->
+    <script src="js/index.js"></script>
+    <script src="http://ayd-1252311027.cossh.myqcloud.com/js/getQueryString.js"></script>  <!---->
+    <script src="js/getCodefCenter.js"></script>  <!---->
+</head>
+<body onload="load()">
+    <div class="loadingView">
+        <div class="loadingInfo">
+            <div class="loadEffect">
+                <!--<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>-->
+                <img src="http://ayd-1252311027.cossh.myqcloud.com/images/loading.png" class="loadImg" alt="">
+            </div>
+            <p class="loadWord">正在加载，请稍等...</p>
+        </div>
+    </div>
+    <div class="QR-view" id="QR-view">
+        <div class="QR-code">
+            <img class="QR-codeIMG" alt="二维码图片">
+        </div>
+        <div class="QR-box">
+            <div class="QR-info">请扫描二维码添加好友<br>发送下方入群验证码</div>
+            <div class="QRd-title">
+                <span class="left-k"></span>
+                <span id="validateCode"></span>
+                <span class="right-k"></span>
+            </div>
+            <div class="QR-prompt">
+                该验证码稍后也会以<br>短信方式发送至您手机
+            </div>
+            <div class="QR-footer">
+                <img src="images/Bitmap Copy.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function load() {
+        getCodeFunction.init();
+    }
+</script>
+</html>

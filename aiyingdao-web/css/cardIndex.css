@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+html,
+body {
+  font-family: PingFangSC-Regular;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html,
+body {
+  background: url("http://ayd-1252311027.cossh.myqcloud.com/images/Group 3.png") no-repeat;
+  background-size: cover;
+}
+.cardView {
+  text-align: center;
+}
+.card-header .cd-title {
+  font-family: PingFangSC-Semibold;
+  font-size: 54px;
+  color: #FE5C86;
+  letter-spacing: 1px;
+  padding-top:70px;
+
+}
+.card-content {
+  padding: 60px 50px;
+}
+.placeColor {
+  color: #9B9B9B;
+}
+.placeColor2 {
+  color: #4A4A4A;
+}
+/*checkbox begin*/
+input[type="checkbox"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 1em;
+}
+[id="privacyChecked"] + label {
+  display: inline-block;
+  vertical-align: middle;
+  background: url("http://ayd-1252311027.cossh.myqcloud.com/images/Checkbox Checked.png") no-repeat #fff;
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+  margin-bottom: 10px;
+  opacity: 1;    border-radius: 8px;
+}
+[id="privacyChecked"] + label:active {
+  background: url("http://ayd-1252311027.cossh.myqcloud.com/images/Checkbox Checked Copy blue.png") no-repeat;
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+}
+[id="privacyChecked"]:checked + label {
+  background: url("http://ayd-1252311027.cossh.myqcloud.com/images/Checkbox Checked Copy blue.png") no-repeat;
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+}
+.bgColor_checked{
+  background-color: #FE5C86;
+  box-shadow: 0 3px 8px 0 rgba(255,110,146,0.75);
+  color: #FFFFFF;
+}
+.bgColor_grey {
+  background-color: #C7BDBD;color: #fff;
+}
+.bgColor_inital{
+  background-color: #FFFFFF;
+  box-shadow: 0 3px 8px 0 rgba(255,110,146,0.75);
+  color: #FE5C86;
+}
+/*checkbox end*/
+.card-footer .cf-prompt {
+  font-size: 20px;
+  color: #FF5C5C;
+  line-height: 24px;
+  padding: 10px 0;
+}
+.card-footer .privacyProtocols .privacyBtn {
+  color: #FE5C86;
+  font-size: 24px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.card-footer .submitBox {
+  display: inline-block;
+  margin: 18px auto;
+}
+.card-footer .submitBox .submitBtn {
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  border-radius: 8px;
+  letter-spacing: 1.8px;
+  width: 560px;
+  height: 82px;
+  line-height: 82px;
+}
+.card-footer .submitBox .getCodeBtn {
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  border-radius: 6px;
+  letter-spacing: 1.8px;
+  width: 560px;
+  height: 82px;
+  line-height: 82px;
+  background-color: #FF4880;;
+}
+.cf-img-logo{
+  margin-top: 40px;
+}
+.submitStyle {
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  border-radius: 6px;
+  letter-spacing: 1.8px;
+  width: 560px;
+  height: 82px;
+  line-height: 82px;
+}
+.model {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1050;
+  overflow: hidden;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.model-info {
+  font-size: 28px;
+}
+.modal-dialog {
+  width: 380px;
+  height: 500px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 30px 32px;
+}
+.modal-dialog .model-container .model-title {
+  text-align: center;
+  padding-bottom: 25px;
+}
+.modal-dialog .model-container .mode-content {
+  height: 350px;
+  overflow-y: auto;
+  font-size: 22px;
+  color: #000;
+    -webkit-overflow-scrolling: touch;
+}
+.modal-dialog .model-container .mode-content p {
+  padding: 10px 0;
+}
+.model-button {
+  padding-top: 25px;
+  text-align: -webkit-center;
+}
+.model-button .modelBtn {
+  background-color: #FF4880;
+  color: #fff;
+  text-align: center;
+  display: block;
+  border: none;
+  outline: none;
+  width: 240px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 24px;
+  border-radius: 8px;
+}
+.model-close {
+  text-align: -webkit-right;
+  text-align: right;
+}
+.model-close .closeIcon {
+  padding: 20px 0;
+}
+.fade {
+  display: none;
+  -webkit-transition: all .15s ease;
+  -o-transition: all .15s ease;
+  transition: all .15s ease;
+}
+.confirmBox_area{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  cursor: default;
+}
+.confirmBox {
+  background-color: white;
+  width: 380px;
+  height: 400px;
+  padding: 30px;
+  text-align: center;
+  position: absolute;
+  left: 50%;top: 50%;
+  margin-left: -220px;
+  margin-top: -230px;
+  border-radius: 12px
+}
+.confirmBox_title {
+  width: 100%;
+  text-align: left;
+  font-size: 26px;
+}
+.confirmBox_submit {
+  width: 200px;
+  font-size: 24px;
+  background-color: #FF4880;
+  color: #fff;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  font-size: 24px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 35px;
+}
+input[disabled] {
+  color: #9B9B9B;
+  background-color: #fff;
+  opacity: 1;
+}
+input[readonly]{
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+input[name='edc']::-webkit-input-placeholder {
+  color: #FE5C86;
+}
+input[name='edc']:-moz-placeholder {
+  color: #FE5C86;
+}
+input[name='edc']::-moz-placeholder {
+  color: #FE5C86;
+}
+input[name='edc']:-ms-input-placeholder {
+  color: #FE5C86;
+}
+input.content_info,#predateSelect {
+  -webkit-appearance: none;
+  outline: none;
+  width: 470px;
+  height: 36px;
+  line-height: 36px;
+  padding: 23px 30px;
+  margin: 15px 0;
+  border: 1px solid #D5D5D5;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  text-align: center;
+  background-color: #FFFFFF;
+  font-size: 24px;
+  box-shadow: 0 3px 8px 0 rgba(255,110,146,0.45);
+  color: #9B9B9B;
+}
+#predateSelect span{
+  color: #FE5C86;
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  border-right: 5px solid #FE5C86;
+  border-bottom: 5px solid #FE5C86;
+  border-radius: 3px;
+  transform: rotate(45deg);
+  margin-top: -30px;
+  margin-left: 440px;
+}
+#date {
+  opacity: 0;
+  -webkit-appearance: none;
+  outline: none;
+  width: 470px;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #D5D5D5;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  text-align: center;
+  background-color: #FFFFFF;
+  font-size: 24px;
+  box-shadow: 0 3px 8px 0 rgba(255,110,146,0.45);
+  color: #FE5C86;
+}
+input[type="date"]::-webkit-clear-button { display:none }

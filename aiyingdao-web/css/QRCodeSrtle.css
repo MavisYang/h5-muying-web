@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: PingFangSC-Semibold;
+    font-size: 28px;
+    color: #333333;
+}
+body {
+  background: url("http://ayd-1252311027.cossh.myqcloud.com/images/Group 2.png") no-repeat;
+  background-size: cover;
+}
+.QR-view {
+  text-align: center;
+}
+.QRd-title {
+  font-family: PingFangSC-Semibold;
+  font-size: 72px;
+  color: #FE5C86;
+  margin: 10px 0 15px 0;
+}
+.left-k,.right-k{
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+}
+.left-k{
+  border-left: 5px solid;
+  border-top: 5px solid;
+  vertical-align: top;
+  margin-right: -20px;
+  border-top-left-radius: 6px;
+}
+.right-k{
+  border-right:  5px solid;
+  border-bottom: 5px solid;
+  vertical-align: bottom;
+  margin-left: -20px;
+  border-bottom-right-radius: 6px;
+}
+.QR-info{
+  font-size: 28px;
+  padding-top: 20px;
+}
+.QR-prompt{
+  font-size: 24px;
+}
+.QR-code{
+  display: inline-block;
+  border-radius: 12px;
+}
+.QR-code img {
+  width: 324px;
+  height: 324px;
+  margin-top: 40px;
+  text-align: center;
+}
+.QR-footer {
+  margin-top: 150px;
+}
+

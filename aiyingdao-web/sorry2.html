@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640,user-scalable=no,target-densitydpi=device-dpi">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <title>出错啦</title>
+</head>
+<style>
+    *{margin: 0;padding: 0}
+    html,body{ font-family: PingFangSC-Regular; overflow-x: hidden; -webkit-tap-highlight-color: rgba(0,0,0,0);height: 100%;
+        background: url("http://ayd-1252311027.cossh.myqcloud.com/images/Group 2.png") no-repeat; background-size: cover; }
+    .again-repeat-wraper{ text-align: center; }
+    .ar-header{ font-size: 72px; color:#FE5C86; letter-spacing: 7.5px; padding: 75px 0 60px 0; }
+    .ar-content{ width: 445px; color: #FE5C86; padding: 40px 0; background-color: rgba(255,255,255,.75); border-radius: 25px; font-size: 28px; margin: auto; line-height: 50px; }
+</style>
+<script src="js/jquery-3.0.0.min.js"></script>
+<script src="js/getQueryString.js"></script>
+<body>
+<div class="again-repeat-wraper">
+    <div class="ar-header">出错啦</div>
+    <div class="ar-content">
+        <!--<p>似乎您注册的门店未开通群，</p>-->
+        <!--<p>请检查后再次尝试入群！</p>-->
+    </div>
+</div>
+</body>
+<script>
+//    "11501301"：获取元数据失败；
+//    糟糕，服务器飞走了。
+//    "11501508"：获取门店失败；
+//    似乎您的门店没有开通社群，请检查后再次尝试入群。
+//    "11501509"：获取城市失败；
+//    似乎您的城市没有开通社群，请检查后再次尝试入群。
+//    "11501506"：更新order失败；
+//    哎呀，好像没法开始您的入群服务，请检查后再次尝试入群。
+//    "11501510"：入群审核失败；
+//    糟糕，您好像已经入过群了，请检查后再次尝试入群。
+//    "11501511"：手机审核失败；
+//    糟糕，您的手机号好像已经入过群了，请检查后再次尝试入群。
+//    "11501512"：标的群匹配失败；
+//    糟糕，没找到您要进入的群，请检查后再次尝试入群。
+//    "11501513"：获取小助手二维码失败；
+//    糟糕，您的入群助手走失了，请稍后再次尝试入群。
+    $(function () {
+        var resultCode = getQueryString('code')
+        var brachs ;
+        switch (resultCode){
+            case '11501301':
+                brachs =' <div>' +
+                    '           <p>糟糕，服务器飞走了。</p>'+
+                    '        </div>'
+                break;
+            case '11501508':
+                brachs =' <div>' +
+                    '           <p>似乎您的门店没有开通社群，</p>' +
+                    '           <p>请检查后再次尝试入群！</p>'+
+                    '        </div>'
+                break;
+            case '11501509':
+                brachs =' <div>' +
+                    '           <p>似乎您的城市没有开通社群，</p>' +
+                    '           <p>请检查后再次尝试入群！</p>'+
+                    '        </div>'
+                break;
+            case '11501506':
+                brachs =' <div>' +
+                    '           <p>好像没法开始您的入群服务，</p>' +
+                    '           <p>请检查后再次尝试入群！</p>'+
+                    '        </div>'
+                break;
+            case '11501510':
+                brachs =' <div>' +
+                    '           <p>您好像已经入过群了，</p>' +
+                    '           <p>请检查后再次尝试入群！</p>'+
+                    '        </div>'
+                break;
+            case '11501511':
+                brachs =' <div>' +
+                    '           <p>您的手机号好像已经入过群了，</p>' +
+                    '           <p>请检查后再次尝试入群！</p>'+
+                    '        </div>'
+                break;
+            case '11501512':
+                brachs =' <div>' +
+                    '           <p>没找到您要进入的群，</p>' +
+                    '           <p>请检查后再次尝试入群！</p>'+
+                    '        </div>'
+                break;
+            case '11501513':
+                brachs =' <div>' +
+                    '           <p>您的入群助手走失了，</p>' +
+                    '           <p>请检查后再次尝试入群！</p>'+
+                    '        </div>'
+                break;
+            default:
+                brachs =' <div>' +
+                    '           <p>糟糕，服务器飞走了。</p>'+
+                    '        </div>'
+                break;
+        }
+        $(".ar-content").append(brachs)
+    })
+</script>
+</html>
