@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>blank</title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/getQueryString.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <script>
+        function getOpenId() {
+            var url = wxIp + 'wechat/ms/userinfo/getUserInfo';
+            $.ajax({
+                url:url,
+                type:"get",
+                dataType:"json",
+                data:{"code":getQueryString("code")},
+                success:function (res) {
+                    var openid=res.data.openid;
+                    sessionStorage.openid = openid;
+                    randomMatch(openid);
+                },
+                error: function (err) {
+                    err;
+                }
+            })
+        }
+        function randomMatch(openid) {
+            var url = groupIp + 'HelperManage/enter/randomMatchGroup';
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: {
+                    openid: openid
+                },
+                success: function (res) {
+                    if(res.status == 200){
+                        window.location.href="QRCode.html?robotQr="+res.data.robotQr+"&code="+res.data.code;
+                    }else{
+                        window.location.href = 'sorry.html';
+                    }
+                },
+                error: function (err) {
+                    err;
+                }
+            })
+        }
+        $(document).ready(function () {
+            if(sessionStorage.openid){
+                randomMatch(sessionStorage.openid);
+            }else{
+                getOpenId();
+            }
+        });
+    </script>
+</body>
+</html>

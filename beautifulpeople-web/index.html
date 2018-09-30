@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640,user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <title>申请入群</title>
+    <link rel="stylesheet" href="css/cardIndex.css">
+    <link rel="stylesheet" href="css/MultiPicker.css">
+</head>
+<body onload="load()">
+<div class="cardView" id="cardView">
+    <div class="card-logo"></div>
+    <!--头部-->
+    <div class="card-header">
+        <div class="cd-title">美素佳儿微社群</div>
+    </div>
+    <!--内容-->
+    <div class="card-content">
+        <form class="bpForm">
+            <div>
+                <input type="hidden" class="content_info" id="province" name="province" disabled>
+            </div>
+            <div>
+                <input type="hidden" class="content_info" id="hospital" name="hospital" disabled>
+            </div>
+            <div class="adSelect" id="cityWrap"></div>
+            <div class="adSelect" id="predateSelect">
+                <span>选择预产期／生日</span>
+                <div class="dot"></div>
+                <input type="date" class="selectChild" name="edc" id="date" onchange="get_predate(this)" />
+            </div>
+        </form>
+    </div>
+    <div class="card-footer">
+        <!--隐私协议-->
+        <div class="privacyProtocols">
+            <input type="checkbox" id="privacyChecked" class="privacyChecked" value="0" style="display: none">
+            <label for="privacyChecked"></label>
+            <a  href="javascript:void(0)" class="privacyBtn" id="privacyBtn">已同意用户信息隐私协议</a>
+        </div>
+        <!--提交-->
+        <div class="submitBox">
+            <button class="submitBtn bgColor_grey" id="submitBtn" disabled>提交并添加小助手</button>
+        </div>
+    </div>
+</div>
+<!--模态框-->
+<div class="model fade">
+    <div class="model-info">
+        <div class="model-close">
+            <img src="images/close.png" class="closeIcon" id="closeIcon">
+        </div>
+        <div class="modal-dialog">
+            <div class="model-container">
+                <h3 class="model-title">用户信息隐私协议</h3>
+                <div class="mode-content">
+                    <p>&nbsp;&nbsp;&nbsp;访问者在提交注册并接受本网站服务之前，请务必仔细阅读本声明。访问者访问本网站的行为以及通过各类方式利用本网站的行为，都将被视作是对本声明全部内容的自愿且无异议的认可。</p>
+
+                    <p>第一条 访问者在从事与本网站相关的所有行为（包括但不限于访问浏览、利用、转载、宣传介绍）时，必须以善意且谨慎的态度行事；访问者不得故意或者过失的损害本网站的各类合法权益，不得利用本网站以任何方式直接或者间接的从事违反中华人民共和国法律、国际公约以及社会公德的行为。</p>
+
+                    <p>第二条 您确认，在您完成注册时，您应当是具备相应民事行为能力的自然人、法人或其他组织。</p>
+
+                    <p>第三条  在您按照注册页面提示填写信息、阅读并同意本协议并完成全部注册程序后或以其他宝妈微社群允许的方式实际使用宝妈微社群平台服务时，即表示您自愿接受本协议的约束。在注册时，您应当按照法律法规要求，或注册页面的提示，准确填写并及时更新您提供的城市、医院、预产期及联系电话等联系方式，以便宝妈微社群与您进行有效联系或为您提供服务，您对此表示接受和认可。</p>
+
+                    <p>第四条 宝妈微社群建议，任何未满18周岁的未成年人参加网上活动应事先取得其监护人（以下简称"监护人"）的同意并遵守《青少年网络文明公约》。</p>
+
+                    <p>第五条 宝妈微社群将在宝妈微社群平台公布并不时修订隐私权政策，隐私权政策构成本协议的有效组成部分。</p>
+
+                    <p>第六条 为保护您的个人信息的安全，宝妈微社群一直并将继续努力采取各种合理的物理、电子和管理方面的安全措施来保护用户信息，使用户的信息不会被泄漏、毁损或者丢失，包括但不限于信息加密存储、数据中心的访问控制。宝妈微社群对可能接触到用户的信息的员工也采取了严格管理，包括但不限于根据岗位的不同设置不同的权限，与员工签署保密协议等措施。对此您表示理解和认同。</p>
+
+                    <p>第七条 若因本网站产生任何诉诸于诉讼程序的法律争议，双方均同意将争议提交上海市有管辖权的人民法院通过诉讼解决。</p>
+
+                    <p>第八条 本声明之订立、修改、更新及最终解释权均属宝妈微社群网站所有。</p>
+
+                    <p>第九条 以上声明于公布之日起生效。</p>
+                </div>
+                <div class="model-button">
+                    <button type="button" class="modelBtn" id="modelBtn">
+                        已阅读并同意协议
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.0.0.min.js"></script>
+<!--<script src="js/browser.js"></script>-->
+<script src="js/jquery.cookie.js"></script>   <!--存储cookie-->
+<script src="js/multiPicker.js"></script>
+<script src="js/index.js"></script>
+<script src="js/getQueryString.js"></script>  <!--获取地址栏中的数值-->
+<script src="js/cardController.js"></script>  <!--效果代码-->
+<script>
+    function load() {
+        controller.init();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640,user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <title>申请入群</title>
+    <link rel="stylesheet" href="css/QRCodeSrtle.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <!--<script src="js/browser.js"></script>   &lt;!&ndash;判断只有微信才可以打开页面&ndash;&gt;-->
+    <script src="js/index.js"></script>
+    <script src="js/getQueryString.js"></script>  <!---->
+    <script src="js/jquery.cookie.js"></script>  <!---->
+    <script src="js/getQRcodeUrl.js"></script>  <!---->
+</head>
+<body onload="load()">
+    <div class="QR-view" id="QR-view">
+        <div class="QR-logo"></div>
+        <div class="QR-code">
+            <img class="QR-codeIMG" alt="二维码图片">
+        </div>
+        <div class="QR-box">
+            <div class="QR-info">请扫描二维码添加好友<br>发送下方验证码</div>
+            <div class="QRd-title">
+                <span class="left-k"></span>
+                <span id="validateCode"></span>
+                <span class="right-k"></span>
+            </div>
+            <div class="QR-prompt">
+                请截图保存验证码<br>稍后会以短信方式发送至您手机
+            </div>
+        </div>
+        <div class="loadingView">
+            <div class="loadingInfo">
+                <div class="loadEffect loadImg">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="spinner-container container3">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+                <p class="loadWord">正在加载，请稍等...</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function load() {
+        getQRcodeFunction.init();
+    }
+</script>
+</html>
