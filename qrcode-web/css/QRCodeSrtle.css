@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+html, body {
+  font-family: PingFangSC-Regular;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+ background: url("http://wyeth-1252311027.file.myqcloud.com/qrcode-web/images/Group 3.png") no-repeat;
+  background-size: cover;
+}
+.QR-header, .QR-code ,.QR-info{
+  text-align: center;
+}
+.QR-header{
+  font-size: 56px;
+  font-family: PingFangSC-Semibold;
+  color: #E62E6E;
+  letter-spacing: 6px;
+  margin-top: 20px;
+  display: none;
+}
+.QR-content{
+  padding:30px 50px;
+  margin-top: 40px;
+}
+.QR-code {
+  margin: 60px auto;
+  display: none;
+}
+.QR-code .QR-box {
+  display: inline-block;
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+input {
+  -webkit-appearance: none;
+  outline: none;
+  width: 470px;
+  height: 36px;
+  line-height: 36px;
+  padding: 23px 30px;
+  margin: 15px 0;
+  border: 1px solid #D5D5D5;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 24px;
+  color: #9B9B9B;
+  background: url("http://wyeth-1252311027.file.myqcloud.com/qrcode-web/images/Path 2 Copy 2.png") no-repeat 94% center #ffffff;
+}
+input[readonly]{
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}

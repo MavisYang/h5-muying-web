@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640,user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <title>入群二维码查询</title>
+    <link rel="stylesheet" href="http://wyeth-1252311027.file.myqcloud.com/qrcode-web/css/QRCodeSrtle.css">
+    <link rel="stylesheet" href="http://wyeth-1252311027.file.myqcloud.com/qrcode-web/css/MultiPicker.css"/>
+    <script src="http://wyeth-1252311027.file.myqcloud.com/qrcode-web/js/jquery-3.0.0.min.js"></script>
+    <!--<script src="http://ayd-1252311027.cossh.myqcloud.com/js/browser.js"></script>-->
+    <script src="http://wyeth-1252311027.file.myqcloud.com/qrcode-web/js/getQueryString.js"></script>  <!--获取地址栏中的数值-->
+</head>
+<body onload="load()">
+    <div class="QR-view" id="QR-view">
+
+        <div class="QR-content">
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="选择城市" name="city" id="address" autocomplete="off" readonly>
+                        <div id="addressContainer"></div>
+                    </td>
+                </tr>
+                <tr class="hosView">
+                    <td>
+                        <input type="text" class="content_text"  id="hospital" name="hospital" placeholder="选择医院" readonly>
+                        <!--<div id="hospitalContainer"></div>-->
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="QR-code">
+            <div class="QR-box">
+                <div id="qrcode"></div>
+                <img id="QRCodeImg"/>
+            </div>
+        </div>
+        <div class="QR-header">
+            请扫描二维码入群
+        </div>
+    </div>
+    <script src="http://wyeth-1252311027.file.myqcloud.com/qrcode-web/js/multiPicker.js"></script>   <!---->
+    <script src="http://wyeth-1252311027.file.myqcloud.com/qrcode-web/js/jquery.qrcode.min.js"></script> <!--生产二维码插件-->
+    <script src="js/getCityHosData.js"></script>
+    <script src="js/QRcode.js"></script>
+    <script>
+        function load() {
+            controller.init();
+        }
+    </script>
+</body>
+</html>
